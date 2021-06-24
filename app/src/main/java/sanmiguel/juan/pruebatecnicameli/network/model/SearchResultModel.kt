@@ -1,0 +1,37 @@
+package sanmiguel.juan.pruebatecnicameli.network.model
+
+import com.squareup.moshi.Json
+
+data class SearchResultModel(
+    var id: String?,
+    @Json(name = "site_id") var siteId: String?,
+    var title: String?,
+    var seller: SellerModel?,
+    var price: Double?,
+    var prices: PriceGeneralModel?,
+    @Json(name = "sale_price") var salePrice: Double?,
+    @Json(name = "currency_id") var currencyId: String?,
+    @Json(name = "available_quantity") var availableQuantity: Int?,
+    @Json(name = "sold_quantity") var soldQuantity: Int?,
+    @Json(name = "buying_mode") var buyingMode: String?,
+    @Json(name = "listing_type_id") var listingTypeId: String?,
+    @Json(name = "stop_time") var stopTime: String?,
+    var condition: String?,
+    var permalink: String?,
+    var thumbnail: String?,
+    @Json(name = "thumbnail_id") var thumbnailId: String?,
+    @Json(name = "accepts_mercadopago") var acceptsMercadoPago: Boolean?,
+    var installments: InstallmentModel?,
+    var address: SearchResultAddressModel?,
+    var shipping: ShippingModel?,
+    var attributes: List<AttributeModel>?,
+    @Json(name = "original_price") var originalPrice: Double?,
+    @Json(name = "category_id") var categoryId: String?,
+    @Json(name = "official_store") var officialStore: String?,
+    @Json(name = "domain_id") var domainId: String?,
+    @Json(name = "catalog_product_id") var productCatalogId: String?,
+    var tags: List<String>?,
+    @Json(name = "catalog_listing") var catalogListing: Boolean?,
+    @Json(name = "use_thumbnail_id") var useThumbnailId: Boolean?,
+    @Json(name = "order_backend") var backendOrder: Int?,
+)
